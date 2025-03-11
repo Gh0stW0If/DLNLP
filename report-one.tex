@@ -42,15 +42,23 @@ The importance of this research extends beyond theoretical linguistics. In natur
 The English corpus is sourced from \textit{Hamlet} in the Gutenberg corpus of the NLTK\cite{bird2006}, while the Chinese corpus is sourced from the 2019 Chinese Wikipedia.
 \subsection*{\centering Preprocession for English}
 o prepare the English text for entropy analysis, a series of preprocessing steps were applied to ensure consistency and reduce noise in the data, thereby facilitating accurate computation of information entropy. The following steps were systematically implemented:
+
 1.Conversion to Lowercase: All alphabetic characters in the text were transformed to lowercase. This step standardizes the representation of the text by eliminating case distinctions (e.g., treating "The" and "the" as identical), which is essential for reducing variability unrelated to semantic or structural content and ensuring uniformity in subsequent analyses.
+
 2.Removal of Punctuation: All punctuation marks (e.g., commas, periods, exclamation points) were excised from the text. This process eliminates non-alphabetic symbols that do not contribute directly to the lexical or sub-lexical units under investigation, allowing the analysis to focus solely on the alphabetic content relevant to entropy calculations.
+
 3.Tokenization: The text was segmented into individual tokens, or words, based on whitespace boundaries. Tokenization is a critical step in preparing the text for word-level entropy analysis, as it delineates the basic units of lexical distribution, enabling the quantification of word frequency and diversity within the corpus.
+
 4.Removal of Stop Words: Common stop words (e.g., "the," "and," "is") were removed from the tokenized text. Stop words, which are typically high-frequency function words with low informational content, were excluded to focus the analysis on content-bearing lexical items. This step enhances the sensitivity of the entropy measure to meaningful linguistic variation rather than syntactic scaffolding.
 \subsection*{\centering Preprocession for Chinese}
 To prepare the Chinese text for entropy analysis, steps similar to those used for English were employed:
+
 1.Conversion from Traditional to Simplified Characters: The OpenCC \cite{yang2020} library was utilized to convert all traditional Chinese characters into their simplified counterparts. This step standardizes the script across the corpus, mitigating variations arising from orthographic differences (e.g., treating "國" and "国" as equivalent), which is crucial for maintaining consistency in character-level and word-level analyses.
+
 2.Filtering with Regular Expressions: Regular expressions (via the re module) were applied to retain only Chinese characters (hanzi) while removing punctuation marks and English alphabetic characters. This process isolates the core linguistic units of interest—Chinese characters—by excluding non-hanzi symbols and foreign elements that are irrelevant to the entropy analysis of the Chinese language structure.
+
 3.Tokenization with Jieba \cite{jieba}: The Jieba library was used to segment the text into individual words. Unlike alphabetic languages, Chinese lacks explicit word boundaries, making word segmentation a critical preprocessing step. Jieba’s probabilistic approach to tokenization effectively delineates multi-character words, enabling accurate word-level entropy computation by identifying lexical units based on contextual and statistical patterns.
+
 4.Removal of Stop Words: Frequently occurring stop words (e.g., "的," "是," "在") were removed from the tokenized text. 
 \subsection*{\centering Entropy Calculation}
 \subsubsection*{\centering Definition of Entropy}
@@ -58,7 +66,7 @@ The calculation of information entropy in this study is based on the framework e
 \begin{equation}
 H=−∑_{i=1}^{n}p(s_i)\log_2p(s_i)
 \end{equation}
-where $p(s_i)$  represents the probability of occurrence of symbol $si s_i si$​, and the logarithm base 2 ensures that entropy is measured in bits. This formula captures the unpredictability inherent in the distribution of symbols: a uniform distribution yields maximum entropy, while a highly skewed distribution results in lower entropy (Shannon, 1948).
+where $p(s_i)$  represents the probability of occurrence of symbol $s_i$​, and the logarithm base 2 ensures that entropy is measured in bits. This formula captures the unpredictability inherent in the distribution of symbols: a uniform distribution yields maximum entropy, while a highly skewed distribution results in lower entropy.
 \subsubsection*{\centering Higher-Order Entropy}
 To explore contextual dependencies, higher-order entropy (e.g., bigram, trigram) was calculated for both languages. For an order-k  model, the entropy $Hk$ is defined as the conditional entropy of a symbol given the preceding k symbols:
 
