@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{jieba}
+{fxsjy}.
+\newblock {Jieba} chinese text segmentation.
+\newblock \url{https://github.com/fxsjy/jieba}.
+\newblock Accessed: 2025-03-10.
+
+\bibitem{mikolov2013efficient}
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Efficient estimation of word representations in vector space.
+\newblock {\em arXiv preprint arXiv:1301.3781}, 2013.
+
+\bibitem{pennington-etal-2014-glove}
+Jeffrey Pennington, Richard Socher, and Christopher Manning.
+\newblock {G}lo{V}e: Global vectors for word representation.
+\newblock In Alessandro Moschitti, Bo~Pang, and Walter Daelemans, editors, {\em Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing ({EMNLP})}, pages 1532--1543, Doha, Qatar, October 2014. Association for Computational Linguistics.
+
+\bibitem{yang2020}
+Xue Yang, Xiaowei Zhao, Gwan Tjio, et~al.
+\newblock Opencc–an open benchmark data set for corpus callosum segmentation and evaluation.
+\newblock In {\em 2020 IEEE International Conference on Image Processing (ICIP)}, pages 3020--3024. IEEE, 2020.
+
+\end{thebibliography}
