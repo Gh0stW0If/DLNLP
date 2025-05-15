@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>像素冒险：群系探险之旅</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: linear-gradient(to bottom, #101018, #1c1c28);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background: url('header-bg.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 4em;
+      color: #f5d76e;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2em;
+      color: #f5d76e;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .content-block {
+      margin-bottom: 60px;
+      animation: fadeInUp 1s ease;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background-color: #2a2a3b;
+      border-radius: 16px;
+      padding: 20px;
+      width: 240px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #ccc;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>像素冒险：群系探险之旅</h1>
+  </header>
+
+  <section>
+    <div class="content-block">
+      <h2>核心玩法</h2>
+      <p style="text-align:center; max-width: 800px; margin: 0 auto;">这是一款融合了Roguelike元素的像素风冒险游戏。在不断变化的多种群系中展开探索，每一次冒险都是全新的体验。你可以邂逅独特的伙伴，收集资源，打造并升级你的装备，与宠物一起成长，挑战未知的敌人与谜题。</p>
+    </div>
+
+    <div class="content-block">
+      <h2>角色介绍</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="youxia.png" alt="游侠">
+          <h3>游侠·艾尔</h3>
+          <p>擅长远程攻击和陷阱，行动敏捷。</p>
+        </div>
+        <div class="card">
+          <img src="lianjin.png" alt="炼金术士">
+          <h3>炼金术士·芙萝拉</h3>
+          <p>可以调配各种药剂，支援队友或削弱敌人。</p>
+        </div>
+        <div class="card">
+          <img src="shouren.png" alt="兽人战士">
+          <h3>兽人战士·卡鲁</h3>
+          <p>高生命值与强力物理攻击，是团队前锋。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h2>装备与宠物</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="sword.png" alt="烈焰剑">
+          <h3>烈焰剑</h3>
+          <p>能灼烧敌人，附加持续伤害。</p>
+        </div>
+        <div class="card">
+          <img src="cat.png" alt="精灵猫">
+          <h3>宠物·精灵猫</h3>
+          <p>具有治疗技能，是可靠的伙伴。</p>
+        </div>
+        <div class="card">
+          <img src="shield.png" alt="坚盾披风">
+          <h3>坚盾披风</h3>
+          <p>提升防御力，减少受到的伤害。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>迷宫远征 - 游戏官网</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com "></script>
+  <style>
+    body {
+      background-image: url('images/bg.png ');
+      background-repeat: repeat;
+      background-size: 400px 400px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen">
+
+  <!-- Hero Section with Background Image -->
+  <header 
+    class="relative bg-cover bg-center py-16 px-6 md:py-24 text-center"
+    style="background-image: url('images/banner.png')"
+  >
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">迷宫远征</h1>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+        探索无尽的地牢、邂逅伙伴、打造装备，在像素世界中展开你的冒险旅程！
+      </p>
+      <div class="mt-8">
+        <button class="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-full shadow-lg transform transition hover:scale-105">
+          开始冒险
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="flex justify-center space-x-4 my-8 text-sm md:text-base">
+    <button onclick="switchTab('gameplay')" class="tab-btn px-4 py-2 rounded-full transition-colors bg-purple-600 text-white">核心玩法</button>
+    <button onclick="switchTab('characters')" class="tab-btn px-4 py-2 rounded-full transition-colors bg-gray-800 hover:bg-gray-700">角色介绍</button>
+    <button onclick="switchTab('equipments')" class="tab-btn px-4 py-2 rounded-full transition-colors bg-gray-800 hover:bg-gray-700">装备系统</button>
+    <button onclick="switchTab('pets')" class="tab-btn px-4 py-2 rounded-full transition-colors bg-gray-800 hover:bg-gray-700">宠物伙伴</button>
+  </nav>
+
+  <!-- Content Sections -->
+  <main class="max-w-6xl mx-auto px-6 pb-16">
+
+    <!-- Gameplay Section -->
+    <section id="gameplay" class="space-y-8 tab-content">
+      <h2 class="text-3xl font-bold text-center mb-6">核心玩法</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">随机地牢 · Rogue-like体验</h3>
+          <p>每次进入地牢都会生成不同的地图、敌人和宝藏。你永远不知道下一层会遇到什么挑战。</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">多群系探索</h3>
+          <p>从炎热的沙漠到寒冷的雪原，每个群系都有独特的敌人、资源和隐藏剧情等待发现。</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">伙伴与宠物系统</h3>
+          <p>在旅途中结识志同道合的伙伴，收服可爱的宠物，共同组成最强冒险队伍。</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">装备打造与升级</h3>
+          <p>收集材料打造强力装备，通过锻造、附魔、镶嵌等方式不断提升战斗力。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="space-y-8 tab-content hidden">
+      <h2 class="text-3xl font-bold text-center mb-6">可遇角色</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/elf.png" alt="艾琳" class="rounded-full w-24 h-24 object-cover mb-4" />
+          <h3 class="text-xl font-bold">艾琳</h3>
+          <p class="text-sm text-gray-400">弓箭手</p>
+          <p class="mt-2 text-sm">擅长远程攻击的精灵游侠，拥有敏捷和精准的战斗技巧。</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/baserker.png" alt="布鲁托" class="rounded-full w-24 h-24 object-cover mb-4" />
+          <h3 class="text-xl font-bold">布鲁托</h3>
+          <p class="text-sm text-gray-400">战士</p>
+          <p class="mt-2 text-sm">来自北方部落的狂战士，使用巨斧与火焰之力进行近战输出。</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/caster.png" alt="露娜" class="rounded-full w-24 h-24 object-cover mb-4" />
+          <h3 class="text-xl font-bold">露娜</h3>
+          <p class="text-sm text-gray-400">法师</p>
+          <p class="mt-2 text-sm">掌握古老魔法的神秘少女，能够操控元素与召唤灵体协助战斗。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipments Section -->
+    <section id="equipments" class="space-y-8 tab-content hidden">
+      <h2 class="text-3xl font-bold text-center mb-6">装备系统</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/bow.png" alt="烈焰之弓" class="w-24 h-24 object-contain mb-4" />
+          <h3 class="text-xl font-bold">烈焰之弓</h3>
+          <p class="text-sm text-gray-400">武器 - 史诗</p>
+          <p class="mt-2 text-sm">+30% 火属性伤害 | 暴击率 +15%</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/cape.png" alt="星辰披风" class="w-24 h-24 object-contain mb-4" />
+          <h3 class="text-xl font-bold">星辰披风</h3>
+          <p class="text-sm text-gray-400">防具 - 稀有</p>
+          <p class="mt-2 text-sm">+20% 闪避 | 受到伤害时有几率回复生命</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/hammer.png" alt="雷神之锤" class="w-24 h-24 object-contain mb-4" />
+          <h3 class="text-xl font-bold">雷神之锤</h3>
+          <p class="text-sm text-gray-400">武器 - 传说</p>
+          <p class="mt-2 text-sm">+40% 雷电伤害 | 攻击时召唤闪电链</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pets Section -->
+    <section id="pets" class="space-y-8 tab-content hidden">
+      <h2 class="text-3xl font-bold text-center mb-6">宠物伙伴</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/fox.png" alt="火焰狐狸" class="w-20 h-20 object-contain mb-4" />
+          <h3 class="text-xl font-bold">火焰狐狸</h3>
+          <p class="text-sm text-gray-400">火属性</p>
+          <p class="mt-2 text-sm">火焰喷射：对敌人造成范围灼烧伤害</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/wolf.png" alt="冰霜狼" class="w-20 h-20 object-contain mb-4" />
+          <h3 class="text-xl font-bold">冰霜狼</h3>
+          <p class="text-sm text-gray-400">冰属性</p>
+          <p class="mt-2 text-sm">寒冰咆哮：冻结周围敌人并降低其防御</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
+          <img src="images/cat.png" alt="机械小猫" class="w-20 h-20 object-contain mb-4" />
+          <h3 class="text-xl font-bold">机械小猫</h3>
+          <p class="text-sm text-gray-400">科技系</p>
+          <p class="mt-2 text-sm">能量护盾：为角色提供短暂无敌效果</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-8 text-center text-sm text-gray-400">
+    &copy; 2025 迷宫远征开发组. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for Tab Switching -->
+  <script>
+    const tabs = ['gameplay', 'characters', 'equipments', 'pets'];
+
+    function switchTab(tabId) {
+      tabs.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+        document.querySelector(`[onclick="switchTab('${id}')"]`).classList.remove('bg-purple-600', 'text-white');
+        document.querySelector(`[onclick="switchTab('${id}')"]`).classList.add('bg-gray-800');
+      });
+      document.getElementById(tabId).classList.remove('hidden');
+      document.querySelector(`[onclick="switchTab('${tabId}')"]`).classList.add('bg-purple-600', 'text-white');
+      document.querySelector(`[onclick="switchTab('${tabId}')"]`).classList.remove('bg-gray-800');
+    }
+
+    // 默认显示第一个标签
+    window.onload = () => switchTab('gameplay');
+  </script>
+</body>
+</html>
